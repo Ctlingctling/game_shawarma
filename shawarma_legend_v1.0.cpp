@@ -160,7 +160,6 @@ void handle_input(char input, struct game_state *state, struct customer_data *cu
 int main()
 {
     init_random();
-    SetConsoleTitle("Shawarma Legend (Console Version)");
     start_game();
     printf("Goodbye!\n");
     return 0;
@@ -351,14 +350,14 @@ void wrap_shawarma(struct game_state *state)
 
 void auto_cutter(struct game_state *state)
 {
-    if (state->has_auto_cutter && state->shop.meat_count = 0 && state->shop.raw_count > 0) {
+    if (state->has_auto_cutter && state->shop.meat_count == 0 && state->shop.raw_count > 0) {
         cook_meat(state);
     }
 }
 
 void auto_fries(struct game_state *state)
 {
-    if (state->has_auto_cutter && state->shop.fries_count = 0 && state->shop.potato_count > 0) {
+    if (state->has_auto_cutter && state->shop.fries_count == 0 && state->shop.potato_count > 0) {
         cook_fries(state);
     }
 }
@@ -591,7 +590,7 @@ void start_game()
 {
     bool game_running = true;
 
-    while (app_running) {
+    while (game_running) {
         system("cls");
         printf("=======================================================\n");
         printf("   _____  _                                            \n");
@@ -643,7 +642,7 @@ void start_game()
             }
             case 'q':
             case 'Q':
-                app_running = false;
+                game_running = false;
                 break;
             default:
                 break;
