@@ -151,7 +151,7 @@ g++ main.cpp -o shawarma.exe
 
 ---
 
-**Thank you for playing! Chew the roots, do great things.**
+**Thank you for playing! Chew the roots, achieve exllence.**
 
 # 🌯 沙威玛传奇控制台版
 
