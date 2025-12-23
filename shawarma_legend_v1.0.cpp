@@ -1,3 +1,4 @@
+
 /**
  * --------------------------------
  * 251240041
@@ -617,7 +618,7 @@ void start_game()
                 game.money = 500;
                 game.fame = 500;
                 game.day = 1;
-                game.shop = {50, 50, 50, 50, 50, 50, 0, 0, 50};
+                game.shop = {50, 50, 50, 50, 50, 50, 50, 50, 0, 0};
                 reset_shawarma(&game);
 
                 struct customer_data current_customer = {0};
@@ -920,7 +921,7 @@ void handle_input(char input, struct game_state *state, struct customer_data *cu
 
             if ((*served_count) % 5 == 0) {
                 printf("\n========= Day %d Ended =========\n", state->day);
-                printf("Paying rent (-500) and restocking...\n");
+                printf("Paying rent and restocking...\n");
                 printf("Press Enter to start next day...");
                 _getch();
 
@@ -932,7 +933,7 @@ void handle_input(char input, struct game_state *state, struct customer_data *cu
                     return;
                 }
 
-                printf("[#] Bryant(Sales man): Man, Look at these upgrades! What can I say?\n");
+                printf("\n[#] Bryant(Sales man): Man, Look at these upgrades! What can I say?\n");
                 printf(">>> Press Enter to enter the shop...");
                 _getch();
 
